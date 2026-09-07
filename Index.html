@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoliceLink</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f4f8;
+    }
+
+    .header {
+      background: #12355b;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #12355b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .search-buttons {
+      margin-top: 20px;
+    }
+
+    .search-buttons button {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>POLICELINK</h1>
+    <p>Law Enforcement Information System</p>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>Officer Login</h2>
+
+      <input type="text" placeholder="Officer ID">
+
+      <input type="password" placeholder="Password">
+
+      <button onclick="login()">LOGIN</button>
+
+      <div id="dashboard" style="display:none;">
+
+        <h2>Search Information</h2>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter plate, licence or ID"
+        >
+
+        <div class="search-buttons">
+
+          <button onclick="searchVehicle()">
+            🚗 Search Vehicle
+          </button>
+
+          <button onclick="searchDriver()">
+            🪪 Search Driver Licence
+          </button>
+
+          <button onclick="searchPerson()">
+            🆔 Search ID Number
+          </button>
+
+        </div>
+
+        <div id="result"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function login() {
+      document.getElementById("dashboard").style.display = "block";
+      alert("Demo login successful");
+    }
+
+    function searchVehicle() {
+      document.getElementById("result").innerHTML =
+        "<h3>Vehicle Search</h3>" +
+        "<p>Demo system: no real government data connected.</p>";
+    }
+
+    function searchDriver() {
+      document.getElementById("result").innerHTML =
+        "<h3>Driver Licence Search</h3>" +
+        "<p>Demo system: no real government data connected.</p>";
+    }
+
+    function searchPerson() {
+      document.getElementById("result").innerHTML =
+        "<h3>Person Search</h3>" +
+        "<p>Demo system: no real government data connected.</p>";
+    }
+
+  </script>
+
+</body>
+</html>
